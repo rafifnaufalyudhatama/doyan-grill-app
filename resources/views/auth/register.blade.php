@@ -1,4 +1,14 @@
-<x-guest-layout>
+@extends('layouts.app')
+
+@section('content')
+<div class="min-h-[80vh] flex flex-col justify-center items-center p-4 relative">
+    <!-- Decorative Background Elements -->
+    <div class="absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-gradient-to-br from-orange-400 to-red-500 rounded-full blur-[100px] opacity-20 -z-10"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-gradient-to-br from-red-500 to-orange-400 rounded-full blur-[100px] opacity-20 -z-10"></div>
+
+    <div class="w-full sm:max-w-md bg-white p-8 sm:p-10 shadow-2xl shadow-orange-500/10 rounded-[2rem] border border-orange-100 relative overflow-hidden">
+        <!-- Decorative accent line -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-orange-500 to-red-500"></div>
     <div class="text-center mb-8">
         <h2 class="text-2xl font-extrabold text-gray-800">Daftar Akun Baru</h2>
         <p class="text-gray-500 mt-2 text-sm">Bergabunglah untuk menikmati pengalaman berbelanja terbaik</p>
@@ -71,4 +81,6 @@
             <a href="{{ route('login') }}" class="font-bold text-orange-500 hover:text-orange-600 transition-colors">Masuk di sini</a>
         </div>
     </form>
-</x-guest-layout>
+    </div>
+</div>
+@endsection

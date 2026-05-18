@@ -36,7 +36,7 @@
                     @auth
                         <a href="{{ route('recommendation.index') }}" class="hover:text-orange-500 transition-colors">Rekomendasi</a>
                         @if(Auth::user()->role === 'admin')
-                            <a href="{{ route('admin.dashboard') }}" class="hover:text-orange-500 transition-colors">Dashboard Admin</a>
+                            <a href="{{ route('admin.dashboard') }}" class="py-1.5 px-4 rounded-full border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all text-sm font-bold flex items-center gap-2"><i class="fas fa-gauge-high"></i> Panel Admin</a>
                         @endif
                     @endauth
                 </div>
