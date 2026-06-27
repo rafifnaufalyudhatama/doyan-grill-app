@@ -96,7 +96,7 @@
 
     <div style="margin-top: 4rem; text-align: center; border-top: 1px dashed #ddd; padding-top: 2rem;">
         <p style="color: #888; font-style: italic;">Terima kasih telah berbelanja di Doyan Frozen & Grill!</p>
-        <div style="margin-top: 2rem;">
+        <div class="invoice-actions" style="margin-top: 2rem;">
             <a href="{{ route('home') }}" class="btn btn-outline">Kembali ke Beranda</a>
             <button onclick="window.print()" class="btn btn-primary" style="margin-left: 1rem;"><i class="fa-solid fa-print"></i> Cetak Invoice</button>
         </div>
@@ -119,6 +119,8 @@
         .invoice-table-wrapper { overflow-x: auto; margin-bottom: 2rem; }
         .invoice-table { min-width: 500px; }
         .invoice-totals { width: 100% !important; }
+        .invoice-actions { display: flex; flex-direction: column; gap: 1rem; }
+        .invoice-actions .btn { margin-left: 0 !important; width: 100%; justify-content: center; }
     }
 </style>
 @endsection

@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 p-6 md:p-10 mb-16 reveal" data-animation="animate-fade-in-up">
-    <div class="flex flex-col md:flex-row gap-10 md:gap-16">
+<div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 p-5 md:p-10 mb-16 reveal" data-animation="animate-fade-in-up">
+    <div class="flex flex-col md:flex-row gap-6 md:gap-16">
         
         <!-- Product Image -->
         <div class="w-full md:w-2/5">
@@ -12,10 +12,10 @@
                     {{ strtoupper($product->category) }}
                 </span>
                 @if($product->image)
-                    <img src="{{ str_starts_with($product->image, 'http') ? $product->image : asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
+                    <img src="{{ str_starts_with($product->image, 'http') ? $product->image : asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-[250px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]">
                 @else
-                    <div class="w-full h-[400px] bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-500">
-                        <i class="fa-solid fa-image text-6xl text-gray-300"></i>
+                    <div class="w-full h-[250px] md:h-[400px] bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-500">
+                        <i class="fa-solid fa-image text-5xl md:text-6xl text-gray-300"></i>
                     </div>
                 @endif
             </div>
@@ -25,8 +25,8 @@
         <div class="w-full md:w-3/5 flex flex-col justify-center">
             <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">{{ $product->name }}</h1>
             
-            <div class="bg-orange-50 border border-orange-100 p-6 rounded-2xl mb-8 flex items-center">
-                <div class="text-4xl font-black text-orange-600">Rp {{ number_format($product->price, 0, ',', '.') }}</div>
+            <div class="bg-orange-50 border border-orange-100 p-4 md:p-6 rounded-2xl mb-8 flex items-center">
+                <div class="text-3xl md:text-4xl font-black text-orange-600">Rp {{ number_format($product->price, 0, ',', '.') }}</div>
             </div>
 
             <div class="mb-8">
